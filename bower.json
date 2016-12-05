@@ -1,0 +1,14 @@
+{
+  "name": "input-defaults",
+  "version": "1.0.0",
+  "description": "",
+  "main": "input-defaults.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "dependencies": {
+    "paper-button": "PolymerElements/paper-button#~1.0.14",
+    "paper-input": "*"
+  }
+}

@@ -1,0 +1,28 @@
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<!--
+  `<input-defaults></input-defaults>` input with defaults
+  @demo demo.html
+-->
+<dom-module id="input-defaults">
+  <template>
+    <style>:host {display:block;background:#fff}</style>
+    <paper-input value="{{value}}">
+      <template is="dom-repeat" items="{{items}}">
+        <paper-button suffix style="height:12px" on-tap="setValue" value="[[item]]" raised >[[item]]</paper-button>
+      </template>
+    </paper-input>
+    
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: "input-defaults",
+    properties:{
+      items:Array,
+    },
+    setValue: function(e){
+      this.value = e.target.value
+    },
+  })
+</script>
